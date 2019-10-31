@@ -77,7 +77,7 @@ def recordings(functionality):
         if(int(comparedValue)>40000 and int(comparedValue)<150000): # this will check if the file is different from the wrong ID recording, above 40000 value means the recording contains a different phrase WARNING: will contain false positives due to inconsistency in the phone line
             new_file_name = "Difference_" + str(int(comparedValue)) + "_" + fileName
             print("The ID: "+ConvoArr[data['conversation_uuid']]['personal_id']+" returned a different response, comparing it against the right ID recording")
-            newcomparison=compare_Audio_Files('rightID.mp3',fileName)
+            newcomparison=compare_Audio_Files('rightID.mp3',fileName) #this will check if the file is similar to the right ID recording, below 45000 over a phone line will most likely mean that the soundfile contains audio that is similar to your right ID recording
             if(int(newcomparison)<45000):
                 new_file_name = "RightID_Difference_" + str(int(newcomparison)) + "_"+fileName
                 os.rename(fileName,"check_these/special_check/"+new_file_name)
