@@ -5,11 +5,11 @@ from pprint import pprint
 client=nexmo.Client(application_id='PUT NEXMO APPLICATION ID HERE',private_key='PUT PATH TO API PRIVATE KEY HERE',)
 did_you_use_it_good=False
 def call_creation_id(personal_id):
-  response = client.create_call({'to':[{'type':'phone','number':'PUT NUMBER TO CALL TO HERE'}],'from':{'type':'phone','number':'00'},"answer_url":["http://PUT_API_ADDRESS_HERE/bambi/bagle/answering/"+str(personal_id)],'length_timer':50})
+  response = client.create_call({'to':[{'type':'phone','number':'PUT NUMBER TO CALL TO HERE'}],'from':{'type':'phone','number':'00'},"answer_url":["http://PUT_API_ADDRESS_HERE/nexmo/api/answering/"+str(personal_id)],'length_timer':50})
   pprint("sending call for id " + str(personal_id))
 
 def call_creation_strings(strings_to_send):
-  response = client.create_call({'to':[{'type':'phone','number':'PUT NUMBER TO CALL TO HERE'}],'from':{'type':'phone','number':'00'},"answer_url":["http://PUT_API_ADDRESS_HERE/bambi/bagle/answering_strings/"+str(strings_to_send)],'length_timer':50})
+  response = client.create_call({'to':[{'type':'phone','number':'PUT NUMBER TO CALL TO HERE'}],'from':{'type':'phone','number':'00'},"answer_url":["http://PUT_API_ADDRESS_HERE/nexmo/api/answering_strings/"+str(strings_to_send)],'length_timer':50})
   pprint("sending call for these strings " + str(strings_to_send))
 
 if (sys.argv[1]=='id'):
