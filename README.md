@@ -23,6 +23,8 @@ other than that install the requirements.txt file
 </br>
 You must obtain API keys for nexmo, you can get a free trial with 2 euros balance, which amounts to around 500 calls.
 Set the API keys on both the event_api and the calling_and_iterating_IDs. Must be the same to access one another.
+For more information regarding nexmo go to their site:
+https://dashboard.nexmo.com/
 </br>
 <h3>API endpoint:</h3>
 </br>
