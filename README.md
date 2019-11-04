@@ -11,7 +11,7 @@ Currently this tool supports three modes:
 
 Once you create a recording of the IVR's response indicating the ID did not match a correct one, and a recording of the IVR's response indicating the ID is the right one (look up in the code wrongID.mp3 and rightID.mp3), it will automatically give you an indication when the recording did not sound like a wrong ID and when it sounded like a right ID.
 
-<h1>installation</h1>
+<h1>Installation</h1>
 
 You need to install an MP3 parser in order to use librosa's mfcc module
 
