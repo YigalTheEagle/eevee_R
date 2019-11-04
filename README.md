@@ -35,7 +35,7 @@ Once you generate both, you can easily send the tool to bruteforce possible IDs 
 
 <h3>Running the client:</h3>
 
-`usage: calling_and_iterating_IDs.py [-h] [-phone PHONE]
+usage: calling_and_iterating_IDs.py [-h] [-phone PHONE]
                                     [-t [{enum,dos,strings}]] [-a A]
                                     [-enumidstart ENUMIDSTART]
                                     [-enumidend ENUMIDEND] [-dospins DOSPINS]
@@ -59,7 +59,7 @@ optional arguments:
                         example abcdpp*123
 
 Example: python calling_and_iterating_IDs.py -p 1672456824 -t enum -a
-http://api_server.com/ -enumidstart 555555555 -enumidend 666666666`
+http://api_server.com/ -enumidstart 555555555 -enumidend 666666666
 
 
 `python calling_and_iterating_IDs.py -p [phone-number] -t [test-type, for example enum or dos] -a [api_endpoint] -enumidstart [id_to_start_from] -enumidend [id_to_end_the_iteration]`
