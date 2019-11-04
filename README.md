@@ -21,7 +21,7 @@ other than that install the requirements.txt file
 You must obtain API keys for nexmo, you can get a free trial with 2 euros balance, which amounts to around 500 calls.
 Set the API keys on both the event_api and the calling_and_iterating_IDs. Must be the same to access one another.
 
-API endpoint:
+<h3>API endpoint:</h3>
 In order to differentiate between when the IVR system says the ID exists or not, you must first generate both recordings.
 You can use the 'enum' module of the client and send two seperate calls against the target IVR system in order to generate both recordings (currently the default is a 4 seconds recording right after the ID was DTMF'd in, might add the ability to change it if this tool proves useful to others). 
 Make sure to generate a recording with the IVR response of a "wrong id, please try again" and "right id, please type in your PIN" or whatever your IVR target says, so the tool will have both as "wrongID.mp3" and "rightID.mp3". 
@@ -30,7 +30,7 @@ Once you generate both, you can easily send the tool to bruteforce possible IDs 
 python event_api.py
 
 
-Running the client:
+<h3>Running the client:</h3>
 
 python calling_and_iterating_IDs.py -p [phone-number] -t [test-type, for example enum or dos] -a [api_endpoint] -enumidstart [id_to_start_from] -enumidend [id_to_end_the_iteration]
 
