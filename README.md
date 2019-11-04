@@ -35,6 +35,33 @@ Once you generate both, you can easily send the tool to bruteforce possible IDs 
 
 <h3>Running the client:</h3>
 
+`usage: calling_and_iterating_IDs.py [-h] [-phone PHONE]
+                                    [-t [{enum,dos,strings}]] [-a A]
+                                    [-enumidstart ENUMIDSTART]
+                                    [-enumidend ENUMIDEND] [-dospins DOSPINS]
+                                    [-strings STRINGS]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -phone PHONE, -p PHONE
+                        target IVR phone number
+  -t [{enum,dos,strings}]
+                        Choose the test type. id enumeration, dos versus a
+                        supplied id, or strings
+  -a A, -api A          your API server address, to communicate with nexmo's
+                        API server
+  -enumidstart ENUMIDSTART
+                        the ID to start from
+  -enumidend ENUMIDEND  the last ID in the range
+  -dospins DOSPINS      the pins to send in the conversation, seperated by a
+                        comma, for example 123456,123154,123123
+  -strings STRINGS      The DTMF strings to send in the conversation, for
+                        example abcdpp*123
+
+Example: python calling_and_iterating_IDs.py -p 1672456824 -t enum -a
+http://api_server.com/ -enumidstart 555555555 -enumidend 666666666`
+
+
 `python calling_and_iterating_IDs.py -p [phone-number] -t [test-type, for example enum or dos] -a [api_endpoint] -enumidstart [id_to_start_from] -enumidend [id_to_end_the_iteration]`
 
 
