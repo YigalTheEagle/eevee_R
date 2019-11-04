@@ -8,9 +8,15 @@ Currently this tool supports three modes:
 
 Once you create a recording of the IVR's response indicating the ID did not match a correct one, and a recording of the IVR's response indicating the ID is the right one (look up in the code wrongID.mp3 and rightID.mp3), it will automatically give you an indication when the recording did not sound like a wrong ID and when it sounded like a right ID.
 
+<h1>installation</h1>
 
+You need to install an MP3 parser in order to use librosa's mfcc module
 
-Usage:
+apt install ffmpeg
+
+other than that install the requirements.txt file
+
+<h1>Usage:</h1>
 
 You must obtain API keys for nexmo, you can get a free trial with 2 euros balance, which amounts to around 500 calls.
 Set the API keys on both the event_api and the calling_and_iterating_IDs. Must be the same to access one another.
